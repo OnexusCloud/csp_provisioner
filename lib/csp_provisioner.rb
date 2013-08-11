@@ -1,5 +1,10 @@
 module CspProvisioner
-  Dir['jars/*.jar'].each { |file| require file }
+  def self.root
+    spec = Gem::Specification.find_by_name("your_gem_name")
+    gem_root = spec.gem_dir
+  end
+  
+  Dir[CspProvisioner.root + '/lib/jars/*.jar'].each { |file| require file }
   
   require 'java'
     
