@@ -1,6 +1,6 @@
 module CspProvisioner
   def self.root
-    spec = Gem::Specification.find_by_name("your_gem_name")
+    spec = Gem::Specification.find_by_name("csp_provisioner")
     gem_root = spec.gem_dir
   end
   
