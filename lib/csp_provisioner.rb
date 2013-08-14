@@ -1,7 +1,6 @@
 module CspProvisioner
   def self.root
-    spec = Gem::Specification.find_by_name("csp_provisioner")
-    gem_root = spec.gem_dir
+    File.expand_path '../..', __FILE__
   end
   
   Dir[CspProvisioner.root + '/lib/jars/*.jar'].each { |file| require file }
